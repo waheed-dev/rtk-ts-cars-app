@@ -1,10 +1,14 @@
 import {changeSearchTerm} from "../store";
 import {useDispatch, useSelector} from "react-redux";
 import {ChangeEvent, FormEvent} from "react";
-
+type State = {
+   cars : {
+       searchTerm : string
+   }
+}
 const CarSearch = () => {
     const dispatch = useDispatch()
-    const searchTerm = useSelector((state) => {
+    const searchTerm = useSelector((state : State) => {
         return state.cars.searchTerm
     })
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

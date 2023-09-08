@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {removeCar} from "../store";
 import CarValue from "./CarValue.tsx";
-import {useState} from "react";
+
 
 type car = {
     name: string
